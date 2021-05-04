@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n=+prompt("Nhap chieu dai cua mang");
+    let num=+prompt("Nhap so can kiem tra");
+    let arr=[];
+    for (let i = 0; i <n ; i++) {
+        arr[i]=Math.round(Math.random()*100)
+    }
+    alert(checkNumber(arr,num)+' '+arr);
+    function checkNumber(arr,num){
+        let count =0;
+        for (let i = 0; i < arr.length; i++) {
+            if(num==arr[i]){
+                count++;
+                return i;
+            }
+        }
+        if(count==0) {
+            return false;
+        }
+    }
+</script>
